@@ -1,8 +1,16 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(224, 224, 247);
+  
   }
   
-  h1 {
-    color: navy;
+  h1,h2,h3 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight:bold; 
+    color: rgb(23, 10, 206);
+    font-style: oblique;
     margin-left: 20px;
+  }
+  em{
+      color: red;
+      font-weight: bold;
   }
