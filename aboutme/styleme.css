@@ -4,7 +4,7 @@ body {
   }
   
   h1,h2,h3 {
-      letter-spacing: .25em;
+    letter-spacing: 0.25em;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight:bold; 
     color: rgb(23, 10, 206);
