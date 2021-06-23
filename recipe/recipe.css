@@ -19,7 +19,7 @@ h1,h2,h3 {
       background-image: url('../images/silverware.jpg') ;
   }
   ul{
-    list-style-image: url('../images/pie-icon.gif');
+    list-style-image: url('../images/pie_bullet.png');
   }
   pre.user
   {
