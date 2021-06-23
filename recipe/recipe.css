@@ -5,16 +5,16 @@ h1,h2,h3 {
     text-decoration: underline;
     color: #A4A400;
     background-color: #F0F0F0;
-    margin-left: 20px;
+   
   }
   h1{
       
-      size: 22pt;
+      font-size: 22pt;
       text-align: center;
   }
   h2,h3 {  
-    size:  18pt;
-    
+    font-size:  18pt;
+    margin-left: 20px;
   }
   body{
       background-image: url('../images/silverware.jpg') ;
