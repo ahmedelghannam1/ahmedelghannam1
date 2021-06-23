@@ -1,0 +1,19 @@
+h1,h2,h3 {  
+    font-family: "Lucida Sans Unicode", Helvetica, Arial,, sans-serif;
+     
+    text-decoration: underline;
+    color: #A4A400;
+    background-color: #F0F0F0;
+    margin-left: 20px;
+  }
+  h1{
+      font-weight:22pt;
+      text-align: center;
+  }
+  h2,h3 {  
+    font-weight:18pt;
+    
+  }
+  body{
+      background-image: url("../images/silverware.jpg") ;
+  }
