@@ -1,6 +1,6 @@
 h1,h2,h3 {  
     font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-    
+    letter-spacing: 0.25em;
     font-weight: bold; 
     text-decoration: underline;
     color: #A4A400;
