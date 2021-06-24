@@ -51,8 +51,20 @@ margin-right: 1%;
       display: block;
       overflow: auto;
       background-color: #E8DC9B;
+      float:left;
+      width:94%
   }
-  
+  .reviewer{
+      font-style: italic;
+
+  }
+
+  .reviewer img
+  {
+      margin-right: 5px;
+      float:left;
+      
+  }
   .quote img
   {
       margin-right: 5px;
