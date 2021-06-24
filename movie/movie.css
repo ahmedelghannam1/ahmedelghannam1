@@ -91,7 +91,7 @@ margin-right: 1%;
    {
       position: absolute;
       bottom: 0px; 
-       align-items: center;
+       text-align:  center;
        background-color: #A2B964;
        width: 550px;
        display: inline-block;
