@@ -83,7 +83,22 @@ margin-right: 1%;
     
     
    }
-   
+   .valis{
+       position: absolute;
+       right: 0px ;
+   }
+   .footer
+   {
+      position: absolute;
+      bottom: 0px; 
+       align-items: center;
+       background-color: #A2B964;
+       width: 550px;
+       display: inline-block;
+   }
+   .list{
+       list-style-type: none;
+   }
    .inlineleft dt
    {
        margin-left:10pt;
