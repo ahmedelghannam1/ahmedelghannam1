@@ -3,41 +3,54 @@ body{
     font-size: 8px;
     font-family: Verdana, Tahoma,  sans-serif ;
 }
+
 #banner{
     background-image: url('../images/movie/bannerbg.png') ;
     height: 50px;
     align-items: center;
 
 }
+
 #imageBan
 {
     
     margin-left: 20%;
     margin-right: auto;
 }
-aside{
-    position: absolute;
-    width: 33%;
-    margin-top: 0px;
-    margin-left: 0px;
+h1
+{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow:3px 3px #999999;
+}
+#container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    border:4px solid  gray;
+    border-radius: 20px;
+    height: fit-content;
+    
+    
 }
 
-#container>.inline,#container>.inlineleft {
+
+#container>.inline {
 display: inline-block;
-width: 33%;
+width: 275px;
+
+
   }
 .inlineleft{
     position: absolute;
     right: 0px;
     top: 0px;
-    }
-#container{
-    position: relative;
-    margin-left: auto;
-    margin-left: auto;
-    width: 800;
+    width: 250px;
     
-}
+   }
+
 #Rotten
 {
     background-image: url('../images/movie/rbg.png') ;
@@ -48,9 +61,3 @@ q{
     background-color: ;
 }
 
-h1
-{
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
