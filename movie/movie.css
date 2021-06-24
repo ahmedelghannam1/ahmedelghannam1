@@ -54,7 +54,10 @@ width: 275px;
 #Rotten
 {
     background-image: url('../images/movie/rbg.png') ;
-    
+    height: 83px;
+    color: red;
+    font-size: 48pt; 
+    font-weight: bold;
 
 }
 q{
