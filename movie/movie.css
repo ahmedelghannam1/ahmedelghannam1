@@ -1,0 +1,55 @@
+body{
+    background-image: url('../images/movie/background.png') ;
+    font-size: 8px;
+    font-family: Verdana, Tahoma,  sans-serif ;
+}
+#banner{
+    background-image: url('../images/movie/bannerbg.png') ;
+    height: 50px;
+    align-items: center;
+
+}
+#imageBan
+{
+    
+    margin-left: 20%;
+    margin-right: auto;
+}
+aside{
+    position: absolute;
+    width: 33%;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+#container>.inline,#container>.inlineleft {
+display: inline-block;
+width: 33%;
+  }
+.inlineleft{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    }
+#container{
+    position: relative;
+    margin-left: auto;
+    margin-left: auto;
+    width: 800;
+    
+}
+#Rotten
+{
+    background-image: url('../images/movie/rbg.png') ;
+    
+
+}
+q{
+    background-color: ;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 24px;
+}
