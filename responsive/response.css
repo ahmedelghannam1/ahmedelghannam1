@@ -31,21 +31,26 @@
     #leftcolumn{
       border: 1px solid black;
       background-color: rgb(224, 223, 219);
-      width: 325px;
+      width: 425px;
       
     }
     #rightcolumn{
       border: 1px solid black;
       position: absolute;
-      width:330px;
+      width:230px;
       right: 0px;
       background-color: rgb(192, 191, 185);
-      height:200px;
+      height:99px;
     }
+    @media screen and (min-width: 600px){
+      #rightcolumn{ height: 200px;}
+    }
+      
+    
     #innercolumn{
       border: 1px solid black;
       background-color: rgb(235, 231, 215);
-      width:605px;;
+      width:700px;;
     }
   .menuitem
   {
