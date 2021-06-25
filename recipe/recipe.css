@@ -1,3 +1,30 @@
-@media screen and (min-width: 600px) {
+h1,h2,h3 {  
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.25em;
+    font-weight: bold; 
+    text-decoration: underline;
+    color: #A4A400;
+    background-color: #F0F0F0;
+   
+  }
+  h1{
+      
+      font-size: 22pt;
+      text-align: center;
+  }
+  h2,h3 {  
+    font-size:  18pt;
+    margin-left: 20px;
+  }
+  body{
+      background-image: url('../images/silverware.jpg') ;
+  }
+  ul{
+    list-style-image: url('../images/pie_bullet.png');
+  }
+  pre.user
+  {
+      background-color: lightyellow;
+  }
   
-}
+  

@@ -26,27 +26,26 @@
       position: relative;
       display: flex;
       flex-wrap: wrap;
-      height:100px;
+      height:200px;
     }
     #leftcolumn{
       border: 1px solid black;
-      margin-top: 0px;
       background-color: rgb(224, 223, 219);
+      width: 325px;
       
-      width: 200px;
     }
     #rightcolumn{
       border: 1px solid black;
       position: absolute;
-      width:300px;
+      width:330px;
       right: 0px;
-     margin-right: 0px;
       background-color: rgb(192, 191, 185);
+      height:200px;
     }
     #innercolumn{
       border: 1px solid black;
       background-color: rgb(235, 231, 215);
-      width:400px
+      width:605px;;
     }
   .menuitem
   {
