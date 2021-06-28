@@ -4,18 +4,29 @@ function allAnimation(){
  
 }
 function start(){
+    cleartext();
     playMotion();   
 }
 function play(a){
     document.getElementById("text-area").value=a; 
 }
+function wait (){
+
+}
+wait (){
+
+}
 function playMotion(){
     var a =splitFunc();
-    for (var i=0; i<a.length;i++){
-      var timerplay=setInterval(play, 250,a[i]);
-      //cleartext();
-
+   
+    for (var i=0;i<a.length;i++)
+    {
+        
+        setTimeout(wait, 1000);
+        play(a[i]);
+        
     }
+    
    
 }
 
