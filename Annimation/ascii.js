@@ -7,24 +7,28 @@ function pickFont(){
 }
 function pickSpeed()
 {
-    if (document.getElementById("turbo").value=true){
+   // document.getElementById("text-area").value="Nader";
+    if (document.getElementById("turbo").checked==true){
     speed=50;
     } else{
-    speed=250;
+    speed=500;
     }
 }
 
 function stopAnim()
 {
     document.getElementById("text-area").value=defaultarea;
+    clearInterval(timer);
+    document.getElementById("stop").disabled=true;
 }
 
 function start(){
+    //clearInterval(timer);
     document.getElementById("stop").disabled=false;
     defaultarea=document.getElementById("text-area").value;
     pickFont();
     pickSpeed();
-    cleartext();
+   // cleartext();
     playMotion();   
 }
 function wait(){
@@ -33,9 +37,9 @@ function wait(){
 }
 function play(a){
      
-    var timer=null;
+    
         if (timer===null){
-        setInterval(wait ,1000);
+       timer= setInterval(wait ,speed);
         }
         else {
             clearInterval(timer);
@@ -43,9 +47,10 @@ function play(a){
         }
    
 }
-
+var timer=null;
 var motionArr;
 var motionIndex;
+var speed;
 function playMotion(){
     motionArr =splitFunc();
     motionIndex=0;
@@ -56,8 +61,6 @@ function playMotion(){
 function cleartext(){
     document.getElementById("text-area").value=""; 
 }
-
-
 
 
 function splitFunc(){
