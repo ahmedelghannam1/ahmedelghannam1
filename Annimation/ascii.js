@@ -7,18 +7,19 @@ window.onload=function(){
         document.getElementById("text-area").value=a; 
     }
     function playMotion(){
-        var a =splitFunc();
+   /*     var a =splitFunc();
         for (var i=0; i<a.length;i++){
-            setInterval(() => {
-                document.getElementById("text-area").value=a[i];    
-            }, 250);
+          // play(a[i])
+            setInterval(play, 250,a[i]);
 
         }
-
+     */   
+        document.getElementById("text-area").value="Ahmed";
 
     }
+    playMotion();
 
-    document.getElementById("start").onclick=function(){
-    document.getElementById("text-area").value=ANIMATIONS[document.getElementById("animation").value];
+    //document.getElementById("start").onclick=function(){
+    //document.getElementById("text-area").value=ANIMATIONS[document.getElementById("animation").value];
     }
 }
