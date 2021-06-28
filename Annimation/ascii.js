@@ -19,10 +19,14 @@ function stopAnim()
 {
     document.getElementById("text-area").value=defaultarea;
     clearInterval(timer);
+    
+    start();
     document.getElementById("stop").disabled=true;
+    document.getElementById("start").disabled=false;
 }
 
 function start(){
+    document.getElementById("start").disabled=true;
     //clearInterval(timer);
     document.getElementById("stop").disabled=false;
     defaultarea=document.getElementById("text-area").value;
