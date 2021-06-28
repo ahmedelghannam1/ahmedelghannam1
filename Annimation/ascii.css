@@ -6,7 +6,7 @@
 
 #text-area{
 	font-family: monospace;
-    font-size: 12pt;
+   
 	width: 90%;
     height: 400px;
 }
@@ -47,3 +47,29 @@ select{
     right:0px;
     position: fixed;
 }
+.Tiny{
+    font-size: 7pt;
+    color: red;
+}
+.Small{
+    font-size: 10pt;
+    color: blue;
+}
+.Medium {
+    font-size: 12pt;
+    color:yellow;
+}
+.Large {
+    font-size: 16pt;
+    color: orange;
+ }
+ .ExtraLarge {
+    font-size: 24pt;
+    color:blueviolet; 
+ }
+ .XXL {
+    font-size: 32pt;
+    color:green; 
+
+ } 
+  

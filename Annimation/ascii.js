@@ -1,33 +1,56 @@
 function allAnimation(){
     document.getElementById("start").onclick=start;
-   
- 
+    document.getElementById("stop").onclick=stopAnim;
 }
+function pickFont(){
+    document.getElementById("text-area").className=document.getElementById("fontsize").value;
+}
+function pickSpeed()
+{
+    if (document.getElementById("turbo").value=true){
+    speed=50;
+    } else{
+    speed=250;
+    }
+}
+
+function stopAnim()
+{
+    document.getElementById("text-area").value=defaultarea;
+}
+
 function start(){
+    document.getElementById("stop").disabled=false;
+    defaultarea=document.getElementById("text-area").value;
+    pickFont();
+    pickSpeed();
     cleartext();
     playMotion();   
 }
+function wait(){
+    document.getElementById("text-area").value=motionArr[motionIndex%motionArr.length];
+    motionIndex++;
+}
 function play(a){
-    document.getElementById("text-area").value=a; 
+     
+    var timer=null;
+        if (timer===null){
+        setInterval(wait ,1000);
+        }
+        else {
+            clearInterval(timer);
+            timer=null;
+        }
+   
 }
-function wait (){
 
-}
-wait (){
-
-}
+var motionArr;
+var motionIndex;
 function playMotion(){
-    var a =splitFunc();
-   
-    for (var i=0;i<a.length;i++)
-    {
-        
-        setTimeout(wait, 1000);
-        play(a[i]);
-        
-    }
+    motionArr =splitFunc();
+    motionIndex=0;
+   play(motionArr);
     
-   
 }
 
 function cleartext(){
