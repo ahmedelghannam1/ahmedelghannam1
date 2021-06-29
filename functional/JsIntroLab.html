@@ -42,39 +42,13 @@ let rev=str.map((val,index,array)=>str[str.length-1-index]);
 rev=rev.join("");
 console.log("Expected output of reverse(jag testar) is ratset gaj  " + myFunctionTest('ratset gaj', rev));
 
-/*
-6.	Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
-*/
-
-let words= ['Ahmed', 'NsrEldin', 'Elghannam'];
-
-function findLongestWord(words){
-let maxIndex=0;
-let max=words[0].length;
-for (let i=1;i<words.length;i++){
-if (words[i].length>max){
-maxIndex=i;}
-}
-return words[maxIndex];
-};
-console.log("Expected output of findLongestWord(['Ahmed', 'NsrEldin', 'Elghannam']) is Elghannam  " + myFunctionTest('Elghannam', findLongestWord(words)));
-/*
-7.	Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
+/*7.	Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 */
 
 let longWords= ['Ahmed', 'NasrEldin', 'Elghannam'];
 let i=5;
-let x=[];
-function filterLongWords(longWords,i){
-let maxIndex=0;
-
-for (let k=0;k<longWords.length;k++){
-if (longWords[k].length>i){
-x.push(longWords[k]);}
-}
-return x;
-};
-console.log("Expected output of findLongestWord(['Ahmed','NasrEldin','Elghannam'],5) is NasrEldin,Elghannam  " + myFunctionTest(x, filterLongWords(longWords,i)));
+let x=[]=longWords.filter(word=>word.length>i);
+console.log("Expected output of findLongestWord(['Ahmed','NasrEldin','Elghannam'],5) is NasrEldin,Elghannam  " + myFunctionTest(['NasrEldin','Elghannam'], longWords.filter(word=>word.length>i)));
 
 const a=[1,2,3,5,3,3];
 const b =a.map(function(elem,i,array){return elem*10;});
