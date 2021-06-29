@@ -50,49 +50,6 @@ let i=5;
 let x=[]=longWords.filter(word=>word.length>i);
 console.log("Expected output of findLongestWord(['Ahmed','NasrEldin','Elghannam'],5) is NasrEldin,Elghannam  " + myFunctionTest(['NasrEldin','Elghannam'], longWords.filter(word=>word.length>i)));
 
-const a=[1,2,3,5,3,3];
-const b =a.map(function(elem,i,array){return elem*10;});
-const f=b
-const m=[10,20,30,50,30,30];
-
-console.log("Expected output of a [1,2,3,5,3,3] is [10,20,30,50,30,30]  " + myFunctionTest(f, b));
-
-const c=a.map(function(elem,i,array){if (elem===3) return elem;});
-
-console.log("Expected output of a [1,2,3,5,3,3] is ['','',3,'',3,3]  " + myFunctionTest( j=['','',3,'',3,3], c));
-
-
-const ff =a.reduce(function(accumulator,elem){return accumulator*elem;},1);
-console.log("Expected output of a [1,2,3,5,3,3] is 270  " + myFunctionTest( 270, ff));
-
-
-
-
-
-
-
-
-
-/* max returns the maximum of 2 arguments */
-function max(a, b) {
-  if (a > b) {
-    return a;
-  } else {
-    return b;
-  };
-}
-console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
-
-/* max3 takes 3 numbers as arguments and returns the largest */
-function maxOfThree(a, b, c) {
-  return max(max(a, b), c);
-
-}
-
-console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
-console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
-
-console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
     </script>
 </head>
 <body>
