@@ -1,4 +1,5 @@
-<html lang="En" >
+<!DOCTYPE html>
+    <html lang="En" >
 
     <head>
 
@@ -6,8 +7,8 @@
 
         <meta charset="UTF-8">
 
-
-    <link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="test.css"> 
+    
 
     </head>
 
@@ -16,11 +17,72 @@
 <body>
 
    <script>
+    "use strict";
+
+var b = 5;
+var c = hello(b);
+var a = 1000;
+var d = {a: 50, b: 90};
+console.log(c.apply(d));
+function hello(a) {
+    console.log(this);
+    a = a * 2;
+    console.log(bye())
+    function bye() {
+        console.log(this);
+        console.log(b);
+        console.log(this.b);
+        return a;
+    }
+    var b = 100;
+    return bye;
+}
 
 </script>
-<div id="first_element">First element</div> 
-<div id="second_element">Second element</div> 
+<!--<div id="first_element">First element
+    <div id="second_element">Second element</div>
 
+</div>1-->
+
+<style>
+    
+#container{
+    display:grid;
+    grid-template-areas:
+    'rowone rowtwo'
+    'rowthree rowthree'
+    ;
+    
+}
+
+#first{grid-area: rowone;}
+#last{grid-area: rowtwo;}
+#fav{grid-area: rowthree;}
+
+</style>
+
+<div>
+    <fieldset>
+        <legend>
+            party info
+
+            </legend>
+       
+       <div id=container>    
+            <div id=first>First name <input type="text"></div>
+            <div id=last>last name <input type="text"></div>
+            <div id=fav>favourite food <select>
+                <option>piza</option>
+                <option>ice</option>
+                <option>toto</option>
+            </select></div>
+        </div>
+    </fieldset>
+
+
+
+    
+</div>
 </body>
 
 </html>
