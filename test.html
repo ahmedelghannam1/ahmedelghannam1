@@ -1,88 +1,65 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
     <html lang="En" >
-
+           <script>
+            "use strict";
+        
+        var b = 5;
+        var c = hello(b);
+        var a = 1000;
+        var d = {a: 50, b: 90};
+        console.log(c.apply(d));
+        function hello(a) {
+            console.log(this);
+            a = a * 2;
+            console.log(bye())
+            function bye() {
+                console.log(this);
+                console.log(b);
+                console.log(this.b);
+                return a;
+            }
+            var b = 100;
+            return bye;
+        }
+        
+        </script>
+        
     <head>
 
         <title>testing  </title>
 
         <meta charset="UTF-8">
 
-<link rel="stylesheet" href="test.css"> 
+<!--<link rel="stylesheet" href="test.css"> -->
     
 
     </head>
-
+<style>
+    
+ 
+    div { border: 1px solid black; }
+    #a { position: relative; width: 1000px; height: 500px; border: 5px solid red}
+    #b { position: absolute;  bottom: 50px;  left: 0px; right: 0px; border:5px solid green;}
+    #c { position: absolute; right: 0px;   border:5px solid blue;}
+    </style>
+    
     
 
 <body>
 
-   <script>
-    "use strict";
-
-var b = 5;
-var c = hello(b);
-var a = 1000;
-var d = {a: 50, b: 90};
-console.log(c.apply(d));
-function hello(a) {
-    console.log(this);
-    a = a * 2;
-    console.log(bye())
-    function bye() {
-        console.log(this);
-        console.log(b);
-        console.log(this.b);
-        return a;
-    }
-    var b = 100;
-    return bye;
-}
-
-</script>
 <!--<div id="first_element">First element
     <div id="second_element">Second element</div>
 
 </div>1-->
 
-<style>
-    
-#container{
-    display:grid;
-    grid-template-areas:
-    'rowone rowtwo'
-    'rowthree rowthree'
-    ;
-    
-}
 
-#first{grid-area: rowone;}
-#last{grid-area: rowtwo;}
-#fav{grid-area: rowthree;}
 
-</style>
-
-<div>
-    <fieldset>
-        <legend>
-            party info
-
-            </legend>
-       
-       <div id=container>    
-            <div id=first>First name <input type="text"></div>
-            <div id=last>last name <input type="text"></div>
-            <div id=fav>favourite food <select>
-                <option>piza</option>
-                <option>ice</option>
-                <option>toto</option>
-            </select></div>
+    <div id="a">Text for a
+        
+        <div id="b">Text for b
+        <div id="c">Text for c</div>
         </div>
-    </fieldset>
-
-
-
-    
-</div>
+        <div id="d">Text for d</div>
+    </div>
 </body>
-
 </html>
