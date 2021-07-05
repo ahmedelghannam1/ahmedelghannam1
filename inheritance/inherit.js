@@ -61,3 +61,39 @@ function BubbleSort(arr){
 }
 var bs= new BubbleSort([4,3,5,1,-2,1]);
 console.log(bs.bubleSort());
+
+
+
+var Person = function() {};
+Person.prototype.initialize = function(name, age)
+{
+this.name = name;
+this.age = age;
+}
+Person.prototype.describe = function()
+{
+return this.name + ", " + this.age + " years old.";
+}
+var Student = function() {};
+Student.prototype = new Person();
+Student.prototype.learn = function(subject)
+{
+console.log(this.name + " just learned " + subject);
+}
+var me = new Student();
+me.initialize("John", 25);
+me.learn("Inheritance");
+
+var Teacher = new Person();
+Teacher._proto_=Person.prototype;
+Teacher.teach= function (str) {
+return this.name+" is now teaching "+str;    
+}
+Teacher.initialize("Ahmed",40);
+console.log(Teacher.teach("Math"));
+
+/**
+ * Create an object called Teacher derived from the Person class, and implement a method called teach
+which receives a string called subject, and returns:
+[teacher's name] is now teaching [subject]
+ */
