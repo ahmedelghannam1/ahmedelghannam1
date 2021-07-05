@@ -23,7 +23,7 @@ const srcstr= new GoodWords();
  
     
 
-var str="I don't like Maharishi, University is not giving me chance to enjoy life.";
+var str="I don't like Maharishi international University , Miu is not giving me chance to enjoy life.";
 var bannedstr=["don't", "not"];
 
 
