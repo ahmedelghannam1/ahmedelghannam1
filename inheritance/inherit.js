@@ -8,26 +8,23 @@ console.log("This house is not nice!".filter('not'));
 Output: "This house is nice!"
  * 
  */
-function GoodWords(){
- 
 
-}
-GoodWords.prototype.filterme= function  (strorg,filt) {
-        var strarry=strorg.split(" ");
+    
+String.prototype.filterme= function  (filt) {
+        var strarry=this.split(" ");
         var temp= strarry. filter((curr)=> (!filt.includes(curr)) ). reduce((accum,curr)=>accum.concat(curr," "),"");
         return temp;
         
    
     };
-const srcstr= new GoodWords();
- 
+
     
 
 var str="I don't like Maharishi international University , Miu is not giving me chance to enjoy life.";
 var bannedstr=["don't", "not"];
 
 
-console.log( srcstr.filterme(str,bannedstr));
+console.log( str.filterme(bannedstr)+" with String class Updated");
 
 
 
@@ -43,24 +40,24 @@ Output : [-2, 0, 1, 3, 4, 6]
  * 
  */
 
-function BubbleSort(arr){
+
     
-    return{bubleSort:
-    function (){
-        for (let i=0;i<arr.length;i++)
-            for (let j=i+1;j<arr.length;j++)
-           if(i<arr.length-1) 
-            if(arr[i]>arr[j])
+
+    Array.prototype.bubleSort=
+    function bubleSort(){
+        for (let i=0;i<this.length;i++)
+            for (let j=i+1;j<this.length;j++)
+           if(i<this.length-1) 
+            if(this[i]>this[j])
             {
-                let temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
+                let temp=this[i];
+                this[i]=this[j];
+                this[j]=temp;
             }
-    return arr;
-    }};
-}
-var bs= new BubbleSort([4,3,5,1,-2,1]);
-console.log(bs.bubleSort());
+    return this;
+    };
+
+console.log([4,3,5,1,-2,1].bubleSort()+" with updatting the Array class");
 
 
 
