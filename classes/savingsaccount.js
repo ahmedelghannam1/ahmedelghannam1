@@ -18,6 +18,28 @@ class SavingsAccount extends Account {
      getInterest() {
         return this._interest;
     }
+
+      /**
+     * Getter for the 'private' Interest field
+     * 
+     * @returns {Interest} the account number
+     */
+       getInterestAmount() {
+        return this._interest*this.getBalance()/100;
+    }
+    /**
+     * return the interest added this month
+     * 
+     * @returns {Interest} the account number
+     */
+     endOfMonth() {
+
+        var str= "Interest added SavingsAccount"+ this.getNumber() +": balance: " + this.getBalance()+" interest: "+this.getInterestAmount();
+        this.addInterest();
+        return str;
+    }
+
+    
      /**
      * Setter for the 'private' Interest field
      * 

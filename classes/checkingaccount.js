@@ -18,6 +18,22 @@ class CheckingAccount extends Account {
      getoverdraftLimit() {
         return this._overdraftLimit;
     }
+
+/**
+     * return the interest added this month
+     * 
+     * @returns {Interest} the account number
+     */
+ endOfMonth() {
+
+    if (this.getBalance()<0)
+    var str= "Warning, low balance CheckingAccount "+ this.getNumber() +": balance: " + this.getBalance()+" overdraft limit:  "+this.getoverdraftLimit();
+    this.addInterest();
+    return str;
+}
+
+
+
      /**
      * Setter for the 'private' overdraftLimit field
      * 

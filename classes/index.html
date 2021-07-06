@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bank Accounts</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=BxRuOidwLg6erM3-eJdfdD3vgZrUNorG1NoJulCtB4EeKWqpr9VtMCy9Uz_B0YYuw7UVdYbr6b_kW2agShyvJ8xEA3W3RNMH2L-8iiStP16-wtrvhRrHBIayYcm6rLxBZs5QMI4edmGattUyRsoGygt_-aqVJEsI5SXlX4AMgWE4LDq5ns8ELRrPGI6V51hC2gOW6vsif9Zc5EtrgzeOg1ApY_3Rs0tyTBQ5WDlrGEE" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9zYWthaS5jcy5taXUuZWR1L2FjY2Vzcy9jb250ZW50L2F0dGFjaG1lbnQvOTM3Mzc4YTktMGIyMi00NWY2LTg5ODYtMjBhZmE5NGIyZDNhL0Fzc2lnbm1lbnRzLzE1YjAwNjQwLTg2OTUtNGZlZi1hMDFlLTUxM2QxNzBmNGU3ZS9pbmRleC5odG1s"/><script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+
+    <script src="account.js"></script>
+    <script src="savingsaccount.js"></script>
+    <script src="checkingaccount.js"></script>
+    <script src="bank.js"></script>
+    <script src="test.js"></script>
+</head>
+
+<body>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>
