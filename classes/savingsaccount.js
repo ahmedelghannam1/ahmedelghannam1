@@ -55,7 +55,7 @@ class SavingsAccount extends Account {
      * 
      */
      addInterest() {
-        this.deposit(this.getInterest()*this.getBalance()/100);
+       return this.deposit(this.getInterest()*this.getBalance()/100);
        }
       /**
      * @returns {string} representation of this account
