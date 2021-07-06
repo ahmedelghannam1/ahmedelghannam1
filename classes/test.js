@@ -28,7 +28,7 @@ describe("Accounts", function() {
         assert.equal(savNumber, 10002);
       });
       
-      it(`the deposit function make ${x} to be deposited to ${0} ${expected}`, function() {
+      it(`the deposit function make a deposit of  ${x} to  ${0} to get  ${expected}`, function() {
         assert.equal(bal, expected);
       });
       it(`the get balance of  ${bal}  is ${expected}`, function() {
