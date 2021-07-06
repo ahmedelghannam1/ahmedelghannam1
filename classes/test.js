@@ -23,12 +23,7 @@ describe("Accounts", function() {
       it(`the withdraw function of ${5} from  balance of  ${bal} ${bal-5}`, function() {
         assert.equal(bal, expected);
       });
-      expected=savBal*interest;
-      let intamount=sav.getInterestAmount();
-      it(`get interest of ${2.5}/100 from balance of  ${savBal} ${savBal*int}`, function() {
-        assert.equal(intAmount, expected);
-      });
-
+     
       
     }
   
