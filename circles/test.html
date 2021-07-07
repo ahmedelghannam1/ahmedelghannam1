@@ -1,0 +1,22 @@
+<html>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+       
+    
+    <script>$(document).ready(function(){    
+        $(this).mousedown(function(e){
+            var $x = e.pageX;
+            var $y = e.pageY;    
+            var $div = "<div class='theDiv' style='width: 250px; height: 150px; background-color:#e7e7e7; position: absolute; top:" + $y + "px; left:" + $x + "px;'>Hey</div>";
+            $("body").prepend($div);
+        });
+    
+        $(".clear").click(function () {
+            $(".theDiv").remove();
+        });
+    });
+</script>
+    <body>
+        <button id="button1" style="z-index: 2000;" class="clear">Clear</button>
+    </body>
+    </html>
