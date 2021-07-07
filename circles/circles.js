@@ -20,12 +20,6 @@ $(document).ready(function(){
             
             $("<body>").prepend($("<div>", {
                 "class": "circle",
-                "css": {
-                "top": "50%",
-                
-                "margin-right":"20px",
-                "display":"inline-block"
-                },
                 
                }));
                
@@ -57,8 +51,7 @@ $(document).ready(function(){
         $(".circle" ).css("width", function(idx, old) {
             return parseInt(old) + delta + "px";
            }); 
-           $(".circle").css("top", "50%"); 
-           $(".circle").css("right", "50%"); 
+          
 
     }
     timer=setInterval(()=>{enlargeCircle(10)},250);
