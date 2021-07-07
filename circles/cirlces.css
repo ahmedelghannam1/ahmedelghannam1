@@ -1,6 +1,15 @@
-div{
+#1{
     position: absolute;
     width: 50px;
-    border-radius: 25%;
+    height: 50px;
+    border-radius: 100%;
+    top: 50%;
+    right: 50%;
     background-color: blanchedalmond;
+}
+#controls{
+    width:200px;
+    position:absolute;
+    bottom: 20px;
+    left:0px    ;
 }

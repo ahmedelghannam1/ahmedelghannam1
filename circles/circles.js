@@ -1,76 +1,59 @@
-function allAnimation(){
-    document.getElementById("start").onclick=start;
-    document.getElementById("stop").onclick=stopAnim;
-}
-function pickFont(){
-    document.getElementById("text-area").className=document.getElementById("fontsize").value;
-}
-function pickSpeed()
-{
-   // document.getElementById("text-area").value="Nader";
-    if (document.getElementById("turbo").checked==true){
-    speed=50;
-    } else{
-    speed=500;
+class Circle  {
+    /**
+     * Constructor for creating a new Account object
+     * 
+     * @param {id} id of of oject circle
+     */
+    constructor(id) {
+        this._timer=null;
+        this._id = id;
+        this._elem=$(id);
     }
-}
 
-function stopAnim()
-{
-    document.getElementById("text-area").value=defaultarea;
-    clearInterval(timer);
-    
-    start();
-    document.getElementById("stop").disabled=true;
-    document.getElementById("start").disabled=false;
-}
+    /**
+     * Accessor for the 'private' id field
+     * 
+     * @returns {id} id for this element
+     */
+     getElement() {
+        return this._elem;
+    }
+     /**
+     * Accessor for the 'private' id field
+     * 
+     * @returns {id} id for this element
+     */
+      getId() {
+        return this._id;
+    }
+    /**
+     * enlarge the circle by value of dela
+     * 
+     * @param {delta} is the delta increment on both width and height
+     */
+     enlargeCircle(delta) {
+       
+  
+      /*  $("div").css("height", parseInt($("div").css("height")) +
+        10 + "px");*/
+        var id=this.getId() ;
+        $("#" + id +"").css("height", function(idx, old) {
+            return parseInt(old) + delta + "px";
+           }); 
+        $("#" + id +"").css("width", function(idx, old) {
+            return parseInt(old) + delta + "px";
+           }); 
+    }
+    removeElement(id){
+        $("#"+id).hide();
+        clearInterval(this._timer);
+    }
 
-function start(){
-    document.getElementById("start").disabled=true;
-    //clearInterval(timer);
-    document.getElementById("stop").disabled=false;
-    defaultarea=document.getElementById("text-area").value;
-    pickFont();
-    pickSpeed();
-   // cleartext();
-    playMotion();   
 }
-function wait(){
-    document.getElementById("text-area").value=motionArr[motionIndex%motionArr.length];
-    motionIndex++;
-}
-function play(a){
-     
-    
-        if (timer===null){
-       timer= setInterval(wait ,speed);
-        }
-        else {
-            clearInterval(timer);
-            timer=null;
-        }
-   
-}
-var timer=null;
-var motionArr;
-var motionIndex;
-var speed;
-function playMotion(){
-    motionArr =splitFunc();
-    motionIndex=0;
-   play(motionArr);
-    
-}
-
-function cleartext(){
-    document.getElementById("text-area").value=""; 
-}
+cir =new Circle(1);
+ cir._timer=null;
+//enlargeCircle.bind(cir)
+timer=setInterval(()=>{cir.enlargeCircle(10)},250);
+cir.getElement().click(cir.hide);
 
 
-function splitFunc(){
-    var x= ANIMATIONS[document.getElementById("animation").value].split("=====");
-    
-    return x;
-}
-
-window.onload=allAnimation;
