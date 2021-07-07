@@ -16,14 +16,10 @@ $(document).ready(function(){
         
         for ( i=1;i<num;i++)
         {
-           
-            
             $("<body>").prepend($("<div>", {
                 "class": "circle",
                 
                }));
-               
-          
             
             
        }
