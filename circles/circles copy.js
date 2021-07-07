@@ -3,14 +3,14 @@ $(document).ready(function(){
 
   var timer=null;
   const rem= function (){
-        $(".circle").hide();
+        $("#1").hide();
       clearInterval(timer);
         //timer=null;
     }
     const shw=function(id){
         clearInterval(timer);
         setsz(1,$("#width").val());
-        $(".circle").toggle('show');
+        $("#"+id).toggle('show');
         var del= parseInt( $("#interval").val());
         var gro= parseInt($("#grossAmount").val());
         
@@ -21,24 +21,24 @@ $(document).ready(function(){
   
    const setsz= function setsize(id,size){
        
-        $(".circle" ).css("height", size+"px"); 
-        $(".circle" ).css("width", size+"px");  
+        $("#" + id ).css("height", size+"px"); 
+        $("#" + id ).css("width", size+"px");  
 
     }
     function enlargeCircle(delta) {
        var id=1;
-        $(".circle").css("height", function(idx, old) {
+        $("#" + id ).css("height", function(idx, old) {
             return parseInt(old) + delta + "px";
            }); 
-        $(".circle" ).css("width", function(idx, old) {
+        $("#" + id ).css("width", function(idx, old) {
             return parseInt(old) + delta + "px";
            }); 
-           $(".circle").css("top", "50%"); 
-           $(".circle").css("right", "50%"); 
+           $("#" + id ).css("top", "50%"); 
+           $("#" + id ).css("right", "50%"); 
 
     }
     timer=setInterval(()=>{enlargeCircle(10)},250);
-    $(document).on( 'click', '.circle',()=>{ rem(1)});
+    $(document).on( 'click', '#1',()=>{ rem(1)});
     $(document).on( 'click', '#start',()=>{ shw(1)});
      // document.getElementById(1).onclick=removeElement; 
 });
