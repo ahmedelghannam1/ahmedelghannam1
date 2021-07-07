@@ -15,9 +15,15 @@ $(document).ready(function(){
         var pos=0;
         
         for ( i=1;i<num;i++)
-        {
-            $("<body>").append($("<div>", {
-                "class": "circle"                
+        { 
+            
+            $("body").append($("<div>", {
+                "class": "circle",
+                "css": {
+                    "right": i*50+"px",
+                   
+                    }
+                           
                }));
             
             
