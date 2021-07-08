@@ -1,3 +1,4 @@
+"use strict";
 $(function() {
     var wallHit=0;
     var startVisited=0;
@@ -19,7 +20,7 @@ $(function() {
 
     const strt= function () {
        wallHit=0;
-      // alert($("#start").hoverdir()+"ahmed");
+     
         $(".boundary").removeClass("youlose");
         startVisited=1;
 
