@@ -2,16 +2,19 @@
 <html lang='en'>
  <head>
  <meta charset="utf-8">
+ 
+ <title>Current time</title>
+
+ 
  <%    
  if (time>="06:00:00" && time<="18:00:00")
  {%>
- <link href="../css/day.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="/css/day.css">
  <%} else {%>
-    <link href="../css/night.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="/css/night.css">
 <%}%>
- <title>Current time</title>
  </head>
  <body>
- This page was loaded at <%= time %>
+ This page was loaded  at <%= time %>
  </body>
 </html>
