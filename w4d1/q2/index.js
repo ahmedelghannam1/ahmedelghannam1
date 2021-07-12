@@ -1,6 +1,6 @@
 const express = require('express');
-const parseurl = require('parseurl')
-const session = require('express-session')
+const parseurl = require('parseurl');
+const session = require('express-session');
 const path=require("path");
 const app = express();
 
@@ -15,13 +15,8 @@ app.use(function (req, res, next) {
       req.session.name = {}; // put views object into session
     }
   
-   
-    next();
+  next();
   });
-
-
-
-
 
 app.use('/result',express.urlencoded({extended:false}));
 
