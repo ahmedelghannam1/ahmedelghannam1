@@ -20,9 +20,9 @@ app.post('/result', (req, res) => {
     if(!age1){
         age1="unknown";
     }
-    res.render("index.ejs", {
+    res.render("out.ejs", {
         name: name1,
-        age: age1
+        age: age1,
         });
 });
 app.listen(3000);
