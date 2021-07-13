@@ -57,17 +57,15 @@ app.post('/addToCart', (req, res) => {
     //res.send(req.body.proPathname);
     if (req.cookies.pathname==0)
     {
-    req.session.cart[0]["price"]=30;  
+    
     req.session.cart[0]["0"]++;
     }
     else if (req.body.proPathname==1)
     {
-       
-        req.session.cart[1]["1"]++;
+       req.session.cart[1]["1"]++;
     }
     else
     {
-        
         req.session.cart[2]["2"]++;
     }
 
