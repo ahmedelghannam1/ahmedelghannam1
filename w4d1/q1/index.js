@@ -6,11 +6,6 @@
  var app = express();
  var cookieParser = require('cookie-parser');
  
- 
- // parses request cookies, populating
- // req.cookies and req.signedCookies
- // when the secret is passed, used
- // for signing the cookies.
  app.use(cookieParser('my secret here'));
  
  // parses x-www-form-urlencoded

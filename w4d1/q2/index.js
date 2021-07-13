@@ -14,8 +14,7 @@ app.use(function (req, res, next) {
     if (!req.session.name) {
       req.session.name = {}; // put views object into session
     }
-  
-  next();
+    next();
   });
 
 app.use('/result',express.urlencoded({extended:false}));
