@@ -32,7 +32,7 @@ app.use(session({
     {
         car[2]["2"]++;
     }
-
+    $("#cart").val(car);
     }
     const noSuccess = () => {
         $("#msg").text("Unable to reach server");
@@ -121,7 +121,7 @@ app.post('/addToCart', (req, res) => {
     }
 */
     res.render("cart.ejs", {
-        cartArr: req.session.cart,
+        cartArr: req.body.cart,
         pathnamea:req.session.pathname 
         });
 });
