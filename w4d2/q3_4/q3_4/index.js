@@ -63,6 +63,7 @@ app.get("/product/pumpkin", (req, res) => {
 });
 
 app.post('/addToCart', (req, res) => {
+    
     //res.send(req.body.proPathname);
     /*if (req.cookies.pathname==0)
     {

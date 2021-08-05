@@ -1,0 +1,67 @@
+import React, { useState } from 'react';
+import Student from '../../components/student/Student'
+import StudentDetails from '../../components/student_details/StudentDetails';
+import './Dashboard.css'
+
+const Dashboard = () => {
+
+    const [students, setStudents] = useState(
+        [
+            { id: 1, name: "Ahmed",major:"Engineer" },
+            { id: 2, name: "Nader" ,major:"Doctor"},
+            { id: 3, name: "Eslam" ,major:"Banker"},
+            { id: 4, name: "Mohamed" ,major:"Engineer"}
+        ]
+    );
+    const studentsList = students.map(stu => {
+        return <Student
+            key={stu.id}
+            id={stu.id}
+            major= {stu.major}
+            name={stu.name} 
+            clicked= {()=>{
+                selectStudentId(stu.id);
+            }}/>
+    }
+    )
+
+    const [selectedStudentId,selectStudentId] = useState(null);
+    const [newName,setNewName] = useState("");
+
+    const changeNameHandler=()=>{
+        if(selectedStudentId!=null){
+            const updatedList = [...students];
+            updatedList[selectedStudentId-1].name = newName;
+            setStudents(updatedList)
+        }
+    }
+    const student=<p></p>
+    const showOrHideSelectedStudent=()=>{
+        if(selectedStudentId!=null){
+            
+            student=<StudentDetails 
+            key={selectedStudentId}
+            id={selectedStudentId}/>
+        }else student= <p>Not Student Selected</p>
+    }
+    return (
+        <div className="Dashboard">
+            <section>
+                {studentsList.length !== 0 ? studentsList : "List is Empty"}
+            </section>
+            {showOrHideSelectedStudent}
+            <section>
+                <p> Selected Student Id: {selectedStudentId}</p>
+                <input type="text" hint="Enter Name" onChange={(event)=>setNewName(event.target.value)}/>
+                <button onClick={changeNameHandler}>ChangeName</button>
+            </section>;
+
+            <section>
+                {student}
+            </section>
+            
+        </div>
+    );
+}
+
+export default Dashboard;

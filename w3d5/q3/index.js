@@ -1,7 +1,7 @@
 const express = require('express');
 const path=require("path");
 const app = express();
-app.use("/result",express.urlencoded({extended:false}));
+app.use("/resu lt",express.urlencoded({extended:false}));
 app.get('/', (req, res) => {
     const date=new Date();
     const hour=date.getHours();

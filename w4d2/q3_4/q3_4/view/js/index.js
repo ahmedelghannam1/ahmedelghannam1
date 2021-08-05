@@ -29,10 +29,11 @@ $(()=>{
             pathnamea: $("#proPathname")
 
             };
+
         $.post({
             url: "/addtocart",
-            data: JSON.stringify(data),
-            contentType: "application/json; charset=utf-8"
+          //  data: JSON.stringify(data),
+           // contentType: "application/json; charset=utf-8"
         }).done(addedSuccess);
            // .fail(noSuccess);
         return false;
