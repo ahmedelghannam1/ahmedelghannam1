@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>My App- Product List</title>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+        </head>
+        <body>
+            <form id="add">
+                <div><label>Product’s Name: <%= pName %>  </label>
+
+                <div><label>Product's Price: <%= pPrice %> </label></div>
+               
+                
+                <input type="hidden" name="cart" value=" <%= cartArrSession %>" >
+                <input type="hidden" name="proPrice" value=" <%= pPrice %>" >
+               <input type="hidden" name="proPathname" value=" <%= pathnameHidden %>" 
+                <div><label> <input type='submit' value='Add to cart'></label></div>
+            </form>
+        </body>
+    </html>
+    
